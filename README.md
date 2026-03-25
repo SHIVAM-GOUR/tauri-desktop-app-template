@@ -1,4 +1,4 @@
-# LoadVision
+# Project: Tauri Desktop App
 
 A cross-platform desktop application built with **Tauri**, **Rust**, and **React/TypeScript**.
 

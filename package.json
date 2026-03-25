@@ -1,5 +1,5 @@
 {
-  "name": "loadvision-tauri-app",
+  "name": "tauri-desktop-app-template",
   "private": true,
   "version": "0.1.0",
   "type": "module",

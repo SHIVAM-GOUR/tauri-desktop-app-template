@@ -7,7 +7,7 @@ This is a cross-platform desktop application built with **Tauri (Rust + React/Ty
 ## Frontend Project File Structure
 
 ```
-loadvision/
+tauri-desktop-app-template/
 ├── src-tauri/               # Rust backend
 │   ├── src/
 │   │   ├── main.rs          # Tauri app entry point
