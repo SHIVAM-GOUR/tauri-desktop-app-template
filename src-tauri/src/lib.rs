@@ -1,3 +1,4 @@
+// REGISTER TAURI COMMANDS IN THIS FILE
 mod commands;
 
 use tauri::Manager;
@@ -14,6 +15,12 @@ pub fn run() {
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![
             greet,
+            commands::auth::store_access_token,
+            commands::auth::get_access_token,
+            commands::auth::clear_access_token,
+            commands::auth::store_refresh_token,
+            commands::auth::get_refresh_token,
+            commands::auth::clear_refresh_token,
             // here define new commands
             // commands::system::get_system_info
         ])
@@ -23,9 +30,10 @@ pub fn run() {
                 let screen: &tauri::PhysicalSize<u32> = monitor.size();
                 let min_width = screen.width / 2;
                 let min_height = screen.height / 2;
-                window.set_min_size(Some(tauri::Size::Physical(
-                    tauri::PhysicalSize { width: min_width, height: min_height },
-                )))?;
+                window.set_min_size(Some(tauri::Size::Physical(tauri::PhysicalSize {
+                    width: min_width,
+                    height: min_height,
+                })))?;
             }
             Ok(())
         })

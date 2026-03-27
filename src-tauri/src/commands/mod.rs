@@ -1,1 +1,3 @@
-// here define the new commands package like "pod mod <command-group-name>"
+// here define the new commands package like "pub mod <command-group-name>"
+
+pub mod auth;
